@@ -1,0 +1,25 @@
+
+body {
+  font: 10px sans-serif;
+  margin-left: 70px;
+}
+h3{
+  font-size: 26px;
+  text-align: center;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.svg{
+  margin-left: 20px;
+}
+.bar {
+  fill: steelblue;
+}
+.legend{
+  padding-left: 20px;
+  margin-left: 20px;
+}
