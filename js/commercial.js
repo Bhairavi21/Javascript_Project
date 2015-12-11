@@ -1,6 +1,6 @@
 d3.json("json/Commercial.json", function(data) {
-  var svgHeight = 450;
-var svgWidth = 900;
+  var svgHeight = 550;
+var svgWidth = 1100;
 var maxSum = d3.max(data,function(d){return d.Sum;}); // You can also compute this from the data
 var barSpacing = 1; // The amount of space you want to keep between the bars
 var padding = {

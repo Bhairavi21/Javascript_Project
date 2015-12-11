@@ -1,7 +1,7 @@
 d3.json("json/Food.json", function(data) {
   data.sort(function(a,b){return b.Year2013-a.Year2013;});
-var svgHeight = 500;
-var svgWidth = 1000;
+var svgHeight = 550;
+var svgWidth = 1100;
 var maxYear2013 = d3.max(data,function(d){return d.Year2013;}); // You can also compute this from the data
 var barSpacing = 1; // The amount of space you want to keep between the bars
 var padding = {

@@ -19,7 +19,7 @@ var xAxis = d3.svg.axis()
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
-    .tickFormat(d3.format(".2s"));
+    //.tickFormat(d3.format(".2s"));
 
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -34,8 +34,8 @@ d3.json("json/states.json", function(error, data) {
 
   data.forEach(function(d) {
     var y0 = 0;
-    d.ages = color.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
-    d.total = d.ages[d.ages.length - 1].y1;
+    d.prod = color.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
+    d.total = d.prod[d.prod.length - 1].y1;
   });
 
   //data.sort(function(a, b) { return b.total - a.total; });
@@ -67,7 +67,7 @@ d3.json("json/states.json", function(error, data) {
       .attr("transform", function(d) { return "translate(" + x(d.Year) + ",0)"; });
 
   Year.selectAll("rect")
-      .data(function(d) { return d.ages; })
+      .data(function(d) { return d.prod; })
     .enter().append("rect")
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.y1); })
