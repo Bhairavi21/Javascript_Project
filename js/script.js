@@ -36,22 +36,6 @@ function csvJSON(csv){
     }
     state_res.push(state_agg);
   }
-  var a=[southern_states.length];
-  for(i=0;i<southern_states.length;i++)
-  a[i]=[23];
-
-  for(i=0;i<southern_states.length;i++){
-  for(j=0;j<23;j++)
-  {
-  a[i][j]=0;
-  }
-  }
-  var n=0;
-
-  for(i=0;i<southern_states.length;i++){
-    a[i][0]=southern_states[i];
-  }
-
   for(var i=1;i<lines.length;i++){
 
 	  var food_obj = {};
