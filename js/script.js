@@ -101,22 +101,20 @@ function csvJSON(csv){
       comm_res.push(comm_obj);
     }
 //states
-var flag1=null;
-var x=0;
-for(m in southern_states)
-{
-    if(currentline[name].indexOf("Rice Volume "+southern_states[m])>0)
+    if(currentline[name].indexOf("Agricultural Production Foodgrains Rice Volume")>=0)
     {
-      flag1=southern_states[m];
-      if(flag1!=null){
-        j=3;
-      for( k in state_res){
-              currentline[j]=parseFloat(currentline[j]);
-              state_res[k][flag1]=currentline[j];
-            j++;
+      state=currentline[name].substr(47, currentline[name].length);
+
+          if(southern_states.indexOf(state)>-1){
+          j=3;
+          for( k in state_res){
+                  currentline[j]=parseFloat(currentline[j]);
+                  state_res[k][state]=currentline[j];
+                  j++;
+            }
         }
-      }}
-    }
+   }
+
 }
     //Commercial
  var comm_agg={}

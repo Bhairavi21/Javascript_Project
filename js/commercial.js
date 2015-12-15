@@ -82,8 +82,7 @@ function animateBarsUp() {
       .attr("dx","-.5em")
       .style("text-anchor", "end")
       .style("font-size","15px")
-      .text("Production in Bale/mn")
-      .ticks(2);
+      .text("Production in Bale/mn");
  // Insert an axis inside this node
 
   var bars = chart
